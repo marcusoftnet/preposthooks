@@ -1,0 +1,39 @@
+{
+  "name": "preposthooks",
+  "version": "1.0.0",
+  "description": "Some demos of prepost hooks",
+  "main": "index.js",
+  "scripts": {
+    "cleanlogs" : "rm -r ./logs/ && mkdir logs",
+
+    "lint": "jslint '*.js'",    
+
+    "test": "mocha -u bdd -R spec",
+    "pretest": "npm run lint && npm run cleanlogs",
+    "posttest": "npm run cleanlogs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "."
+  },
+  "keywords": [
+    "npm",
+    "scripting",
+    "pre",
+    "post",
+    "hooks"
+  ],
+  "author": "Marcus Hammarberg @marcusoftnet",
+  "license": "MIT",
+  "devDependencies": {
+    "jslint": "^0.9.3",
+    "mocha": "^2.2.5",
+    "should": "^7.0.4"
+  },
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "should": "^7.0.4"
+  }
+}
